@@ -39,13 +39,13 @@ export default function Navbar() {
             <a href="#work" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Work</a>
             <a href="#contact" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Contact</a>
             
-            <a href="tel:+13472053599" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors hidden lg:flex items-center gap-2">
+            <a href="tel:+13472053599" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors flex items-center gap-2">
               <span className="text-[#FACC15]">Call us</span>
               <span>+1 (347) 205-3599</span>
             </a>
 
             <a href="https://wa.me/13472053599">
-              <Button variant="outline" size="sm" className="hidden lg:inline-flex border-[#FACC15] text-[#FACC15] hover:bg-[#FACC15]/10">Let's Talk</Button>
+              <Button variant="outline" size="sm" className="border-[#FACC15] text-[#FACC15] hover:bg-[#FACC15]/10">Let's Talk</Button>
             </a>
           </div>
 

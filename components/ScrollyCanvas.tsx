@@ -126,7 +126,7 @@ export default function ScrollyCanvas() {
   }, [isLoaded, scrollYProgress, drawFrame, images.length]);
 
   // Handle Scroll
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+  useMotionValueEvent(scrollYProgress, "change", (latest: number) => {
     if (!isLoaded || images.length === 0) return;
     const currentFrame = Math.round(latest * (FRAME_COUNT - 1));
     drawFrame(currentFrame);
@@ -134,24 +134,9 @@ export default function ScrollyCanvas() {
 
   return (
     <>
-      {!isLoaded && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0D0D0D] text-[#FACC15]">
-          <div className="text-4xl font-syne font-bold mb-4">
-            {Math.round((loadedCount / FRAME_COUNT) * 100)}%
-          </div>
-          <div className="w-64 h-1 bg-[#1A1A1A] rounded-full overflow-hidden">
-            <div 
-              className="h-full bg-[#FACC15] transition-all duration-300 ease-out" 
-              style={{ width: `${Math.round((loadedCount / FRAME_COUNT) * 100)}%` }} 
-            />
-          </div>
-          <p className="mt-4 text-[#888888] font-inter text-sm uppercase tracking-widest text-glow">Loading Experience</p>
-        </div>
-      )}
       <section 
         ref={containerRef} 
         className="relative h-[500vh] w-full bg-[#0D0D0D]"
-        style={{ visibility: isLoaded ? "visible" : "hidden" }}
       >
         <div className="sticky top-0 h-screen w-full overflow-hidden">
           <canvas ref={canvasRef} className="absolute inset-0 block" />
