@@ -39,7 +39,7 @@ export default function Navbar() {
           </div>
           
           {/* NAVIGATION LINKS (Center - Desktop Only) */}
-          <div className="hidden md:flex flex-1 items-center justify-center gap-6 lg:gap-10">
+          <div className="max-lg:hidden flex flex-1 items-center justify-center gap-6 lg:gap-10">
             <a href="#about" className="text-sm font-semibold tracking-wide text-[#F5F5F5] hover:text-[#FACC15] transition-colors">About</a>
             <a href="#services" className="text-sm font-semibold tracking-wide text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Services</a>
             <a href="#work" className="text-sm font-semibold tracking-wide text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Work</a>
@@ -47,7 +47,7 @@ export default function Navbar() {
           </div>
 
           {/* ACTIONS (Right - Desktop Only) */}
-          <div className="hidden md:flex items-center justify-end gap-5 flex-shrink-0">
+          <div className="max-lg:hidden flex items-center justify-end gap-5 flex-shrink-0">
             <a href="tel:+13472053599" className="text-sm font-semibold text-[#F5F5F5] hover:text-[#FACC15] transition-colors flex items-center gap-2">
               <span className="text-[#FACC15]">Call us</span>
               <span className="hidden lg:inline">+1 (347) 205-3599</span>
@@ -61,7 +61,7 @@ export default function Navbar() {
           </div>
 
           {/* MOBILE MENU BUTTON (Mobile Only) */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button 
               className="text-[#F5F5F5] hover:text-[#FACC15] transition-colors p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
