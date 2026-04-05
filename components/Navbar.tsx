@@ -19,44 +19,58 @@ export default function Navbar() {
   return (
     <>
       <nav 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-[#0D0D0D]/80 backdrop-blur-md py-4 border-b border-white/5 shadow-md" : "bg-transparent py-6"
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          isScrolled ? "bg-[#0D0D0D]/90 backdrop-blur-md py-4 border-b border-white/10 shadow-lg" : "bg-transparent py-5"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
-          <a href="#" className="relative h-12 w-12 md:h-14 md:w-14">
-            <Image 
-              src="/logo.png" 
-              alt="Mehdi In Biz Logo" 
-              fill 
-              className="object-contain" 
-            />
-          </a>
+        <div className="max-w-7xl mx-auto w-full px-5 sm:px-8 lg:px-12 flex items-center justify-between">
           
-          <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-            <a href="#about" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">About</a>
-            <a href="#services" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Services</a>
-            <a href="#work" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Work</a>
-            <a href="#contact" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Contact</a>
+          {/* LOGO (Left) */}
+          <div className="flex-shrink-0 flex items-center">
+            <a href="#" className="relative block h-10 w-10 md:h-12 md:w-12">
+              <Image 
+                src="/logo.png" 
+                alt="Mehdi In Biz Logo" 
+                fill 
+                className="object-contain" 
+                priority
+              />
+            </a>
+          </div>
+          
+          {/* NAVIGATION LINKS (Center - Desktop Only) */}
+          <div className="hidden md:flex flex-1 items-center justify-center gap-6 lg:gap-10">
+            <a href="#about" className="text-sm font-semibold tracking-wide text-[#F5F5F5] hover:text-[#FACC15] transition-colors">About</a>
+            <a href="#services" className="text-sm font-semibold tracking-wide text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Services</a>
+            <a href="#work" className="text-sm font-semibold tracking-wide text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Work</a>
+            <a href="#contact" className="text-sm font-semibold tracking-wide text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Contact</a>
           </div>
 
-          <div className="hidden lg:flex items-center gap-6">
-            <a href="tel:+13472053599" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors flex items-center gap-2">
+          {/* ACTIONS (Right - Desktop Only) */}
+          <div className="hidden md:flex items-center justify-end gap-5 flex-shrink-0">
+            <a href="tel:+13472053599" className="text-sm font-semibold text-[#F5F5F5] hover:text-[#FACC15] transition-colors flex items-center gap-2">
               <span className="text-[#FACC15]">Call us</span>
-              <span>+1 (347) 205-3599</span>
+              <span className="hidden lg:inline">+1 (347) 205-3599</span>
             </a>
 
             <a href="https://wa.me/13472053599">
-              <Button variant="outline" size="sm" className="border-[#FACC15] text-[#FACC15] hover:bg-[#FACC15]/10">Let's Talk</Button>
+              <Button variant="outline" size="sm" className="border-[#FACC15] text-[#FACC15] hover:bg-[#FACC15]/10 font-bold tracking-wide">
+                Let's Talk
+              </Button>
             </a>
           </div>
 
-          <button 
-            className="lg:hidden text-[#F5F5F5]"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X /> : <Menu />}
-          </button>
+          {/* MOBILE MENU BUTTON (Mobile Only) */}
+          <div className="md:hidden flex items-center">
+            <button 
+              className="text-[#F5F5F5] hover:text-[#FACC15] transition-colors p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+
         </div>
       </nav>
 
