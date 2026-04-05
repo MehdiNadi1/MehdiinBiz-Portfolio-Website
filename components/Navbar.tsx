@@ -33,12 +33,14 @@ export default function Navbar() {
             />
           </a>
           
-          <div className="hidden sm:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
             <a href="#about" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">About</a>
             <a href="#services" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Services</a>
             <a href="#work" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Work</a>
             <a href="#contact" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Contact</a>
-            
+          </div>
+
+          <div className="hidden lg:flex items-center gap-6">
             <a href="tel:+13472053599" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors flex items-center gap-2">
               <span className="text-[#FACC15]">Call us</span>
               <span>+1 (347) 205-3599</span>
@@ -50,7 +52,7 @@ export default function Navbar() {
           </div>
 
           <button 
-            className="sm:hidden text-[#F5F5F5]"
+            className="lg:hidden text-[#F5F5F5]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X /> : <Menu />}
