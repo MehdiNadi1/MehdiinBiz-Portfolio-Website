@@ -38,6 +38,12 @@ export default function Navbar() {
             <a href="#services" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Services</a>
             <a href="#work" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Work</a>
             <a href="#contact" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Contact</a>
+            
+            <a href="tel:+13472053599" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors hidden lg:flex items-center gap-2">
+              <span className="text-[#FACC15]">Call us</span>
+              <span>+1 (347) 205-3599</span>
+            </a>
+
             <a href="https://wa.me/13472053599">
               <Button variant="outline" size="sm" className="hidden lg:inline-flex border-[#FACC15] text-[#FACC15] hover:bg-[#FACC15]/10">Let's Talk</Button>
             </a>
@@ -64,6 +70,12 @@ export default function Navbar() {
             <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-syne font-bold text-[#F5F5F5]">Services</a>
             <a href="#work" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-syne font-bold text-[#F5F5F5]">Work</a>
             <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-syne font-bold text-[#F5F5F5]">Contact</a>
+            
+            <a href="tel:+13472053599" onClick={() => setMobileMenuOpen(false)} className="text-xl font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors flex items-center gap-2">
+              <span className="text-[#FACC15]">Call us</span>
+              <span>+1 (347) 205-3599</span>
+            </a>
+
             <a href="https://wa.me/13472053599" onClick={() => setMobileMenuOpen(false)} className="mt-4">
               <Button>Let's Talk</Button>
             </a>

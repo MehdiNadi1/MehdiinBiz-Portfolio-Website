@@ -18,7 +18,7 @@ export default function About() {
             The person <span className="underline decoration-[#FACC15] underline-offset-8">behind the screen.</span>
           </h2>
           <p className="text-[#888888] font-light text-lg mb-6 leading-relaxed">
-            I'm Mehdi, a web developer, designer, and AI automation specialist based in Marrakesh. I build high-converting websites and smart digital systems for businesses that want to grow. 
+            I'm Mehdi, a web developer, designer, and AI automation specialist. I build high-converting websites and smart digital systems for businesses that want to grow. 
           </p>
           <p className="text-[#888888] font-light text-lg leading-relaxed">
             From local coffee shops to service companies — I make sure your digital presence works as hard as you do.

@@ -77,7 +77,7 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
           style={{ opacity: s4Opacity, y: s4Y }}
           className="absolute inset-0 flex flex-col items-center justify-center text-center max-w-2xl mx-auto"
         >
-          <span className="text-[#FACC15] font-inter text-xs font-bold uppercase tracking-[0.3em] mb-4 drop-shadow-md">— BASED IN MARRAKESH —</span>
+          <span className="text-[#FACC15] font-inter text-xs font-bold uppercase tracking-[0.3em] mb-4 drop-shadow-md">— MOROCCO —</span>
           <h2 className="text-4xl md:text-6xl font-syne font-bold text-[#F5F5F5] mb-6 leading-tight drop-shadow-lg">
             Local roots. Global standards.
           </h2>
