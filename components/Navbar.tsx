@@ -33,7 +33,7 @@ export default function Navbar() {
             />
           </a>
           
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden sm:flex items-center gap-8">
             <a href="#about" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">About</a>
             <a href="#services" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Services</a>
             <a href="#work" className="text-sm font-medium text-[#F5F5F5] hover:text-[#FACC15] transition-colors">Work</a>
@@ -50,7 +50,7 @@ export default function Navbar() {
           </div>
 
           <button 
-            className="md:hidden text-[#F5F5F5]"
+            className="sm:hidden text-[#F5F5F5]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X /> : <Menu />}
